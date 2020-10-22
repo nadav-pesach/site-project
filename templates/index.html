@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<h1>Find your next book</h1>
+<div id="search">
+    <form id="run-search" action="/" method="get">
+        <label for="mybooks" class="hidden">Your current book:</label><br>
+        <input id="search-box" autofocus id="mybooks" name="mybooks" placeholder="My current book" type="text">
+        <button id="search-button" type="submit"><a href="search">Search</a></button>
+    </form>
+    {% endblock %}
