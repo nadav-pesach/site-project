@@ -1,4 +1,45 @@
 {% extends "base.html" %} {% block content %}
+<div id=c haracter>
+    <p><img src="{{yoursearch['image']}}" alt="{{yoursearch['name']}}"></p>
+    <p>name: {{yoursearch['name']}}</p>
+    <p>status: {{yoursearch['status']}}</p>
+    <p>species: {{yoursearch['species']}}</p>
+    <p>type: {{yoursearch['type']}}</p>
+    <p>gender: {{yoursearch['gender']}}</p>
+    <p>origin: {{yoursearch['origin']['name']}}</p>
+    <p>location: {{yoursearch['location']['name']}}</p>
+</div>
+{% endblock %}
 
-<h2><span>Recommendations:</span></h2>
-resute {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    {{yoursearch}}
+name Rick Sanchez
+status Alive    
+species Human
+type 
+gender Male
+origin {'name': 'Earth (C-137)', 'url': 'https://rickandmortyapi.com/api/location/1'}
+location {'name': 'Earth (Replacement Dimension)', 'url': 'https://rickandmortyapi.com/api/location/20'}
+image https://rickandmortyapi.com/api/character/avatar/1.jpeg
+episode -->-->

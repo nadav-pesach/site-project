@@ -3,12 +3,18 @@ html {
 }
 
 body {
-    background-color: #B4E2FE;
+    background-color: #FFFAE9;
 }
 
 h1 {
     text-align: center;
     font-size: 4rem;
+    padding-top: 250px;
+}
+
+p {
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 #search {
@@ -23,14 +29,14 @@ h1 {
 }
 
 #search-button {
-    background-color: #6A88F4;
+    background-color: #AFA583;
     width: 60px;
     height: 30px;
     color: white;
 }
 
 #navbar {
-    background-color: #67C3FA;
+    background-color: #AFA583;
 }
 
 #navbar ul {
@@ -71,3 +77,17 @@ h2 span {
     margin: 10px;
     padding: 5px;
 }
+
+
+/*-----------------------------------------*/
+
+#character {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+/* #character img {
+    margin-left: auto;
+    margin-right: auto;
+} */

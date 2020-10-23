@@ -1,9 +1,16 @@
 {% extends "base.html" %} {% block content %}
-<h1>Find your next book</h1>
+<h1>Rick and Morty search</h1>
 <div id="search">
-    <form id="run-search" action="/" method="get">
-        <label for="mybooks" class="hidden">Your current book:</label><br>
-        <input id="search-box" autofocus id="mybooks" name="mybooks" placeholder="My current book" type="text">
-        <button id="search-button" type="submit"><a href="search">Search</a></button>
+    <form id="run-search" action="/search" method="GET">
+        <label for="mysearch" class="hidden">search</label><br>
+        <input id="search-box" autofocus id="search-box" name="mysearch" placeholder="search" type="text">
+        <label for="cle" class="hidden">search for:</label>
+        <select name="cle" id="rick">
+          <option value="character">character</option>
+          <option value="location">location</option>
+          <option value="episode">episode</option>
+        </select>
+        <button id="search-button" type="submit">Search</button>
     </form>
-    {% endblock %}
+</div>
+{% endblock %}
