@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block content %}
-<div id=c haracter>
+{% extends "base.html" %} {% block content %} {% if options == 'character' and items %}
+<div id=character>
     <p><img src="{{yoursearch['image']}}" alt="{{yoursearch['name']}}"></p>
     <p>name: {{yoursearch['name']}}</p>
     <p>status: {{yoursearch['status']}}</p>
@@ -9,7 +9,24 @@
     <p>origin: {{yoursearch['origin']['name']}}</p>
     <p>location: {{yoursearch['location']['name']}}</p>
 </div>
-{% endblock %}
+{% elif options == 'character' %}
+<h2>Random 20~ characters</h2>
+<div class="grid-container">
+    {% for somechar in yoursearch %}
+    <div id=multi-character>
+        <p><img src="{{somechar['image']}}" alt="{{yoursearch['name']}}"></p>
+        <p>name: {{somechar['name']}}</p>
+        <p>status: {{somechar['status']}}</p>
+        <p>species: {{somechar['species']}}</p>
+        <p>type: {{somechar['type']}}</p>
+        <p>gender: {{somechar['gender']}}</p>
+        <p>origin: {{somechar['origin']['name']}}</p>
+        <p>location: {{somechar['location']['name']}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endif %} {% endblock %}
+
 
 
 

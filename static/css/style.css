@@ -1,93 +1,98 @@
-html {
-    font-size: 10px
-}
-
-body {
-    background-color: #FFFAE9;
-}
-
-h1 {
-    text-align: center;
-    font-size: 4rem;
-    padding-top: 250px;
-}
-
-p {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-#search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#search-box {
-    width: 350px;
-    height: 30px;
-}
-
-#search-button {
-    background-color: #AFA583;
-    width: 60px;
-    height: 30px;
-    color: white;
-}
-
-#navbar {
-    background-color: #AFA583;
-}
-
-#navbar ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    border-collapse: collapse;
-}
-
-#navbar ul li {
-    margin: 9px;
-    padding: 9px;
-    font-size: 2rem;
-}
-
-#navbar ul li a {
-    text-decoration: none;
-}
-
-#navbar ul li a:hover {
-    background-color: #75D1AA;
-}
-
-.hidden {
-    display: none;
-}
-
-
-/* page2 */
-
-
-/*-----------------------------------------*/
-
-h2 span {
-    font-size: 2rem;
-    /*background-color: steelblue;*/
-    margin: 10px;
-    padding: 5px;
-}
-
-
-/*-----------------------------------------*/
-
-#character {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-
-/* #character img {
-    margin-left: auto;
-    margin-right: auto;
-} */
+    html {
+        font-size: 10px
+    }
+    
+    body {
+        background-color: #FFFAE9;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        padding-top: 250px;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    
+    #search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #search-box {
+        width: 350px;
+        height: 30px;
+    }
+    
+    #search-button {
+        background-color: #AFA583;
+        width: 60px;
+        height: 30px;
+        color: white;
+    }
+    
+    #navbar {
+        background-color: #AFA583;
+    }
+    
+    #navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        border-collapse: collapse;
+    }
+    
+    #navbar ul li {
+        margin: 9px;
+        padding: 9px;
+        font-size: 2rem;
+    }
+    
+    #navbar ul li a {
+        text-decoration: none;
+    }
+    
+    #navbar ul li a:hover {
+        background-color: #75D1AA;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    /*-----------------------------------------*/
+    
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        margin: 10px;
+        padding: 5px;
+    }
+    /*-----------------------------------------*/
+    
+    #character {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    
+    #select-searcher {
+        height: 30px;
+        border-radius: 25px;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    #multi-character {}
