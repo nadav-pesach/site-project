@@ -33,7 +33,7 @@ def search():
             except IndexError as err:
                 print(err)
         if resulte:
-            return render_template('search.html', yoursearch=resulte, options=options, items=items)
+            return render_template('search.html', yoursearch=resulte[1:], options=options, items=items)
         else:
             return render_template('index.html')
     elif options == "character":
