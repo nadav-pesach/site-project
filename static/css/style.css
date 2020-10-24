@@ -110,6 +110,7 @@
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
+        list-style: none;
     }
     
     .info {
