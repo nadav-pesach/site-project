@@ -32,7 +32,6 @@ requests==2.24.0
 six==1.15.0
 toml==0.10.1
 tornado==6.0.4
-traitlets==5.0.5
 urllib3==1.25.11
 wcwidth==0.2.5
 Werkzeug==1.0.1
