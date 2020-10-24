@@ -10,19 +10,21 @@ def index():
     resulte = []
     number = random.randint(0, 32)
     for i in range(number, number + 3):
-            resulte += requests.get(f'https://rickandmortyapi.com/api/character?page={i}').json()['results']
+        resulte += requests.get(
+            f'https://rickandmortyapi.com/api/character?page={i}').json()['results']
     return render_template('index.html', yoursearch=resulte)
 
 
 @app.route('/search', methods=["GET", "POST"])
 def search():
-    items =  request.args.get('mysearch')
+    items = request.args.get('mysearch')
     options = request.args.get('cle')
     resulte = []
     if items and options == "character":
         resp = []
         for i in range(35):
-            resp += requests.get(f'https://rickandmortyapi.com/api/{options}?page={i}').json()['results']
+            resp += requests.get(
+                f'https://rickandmortyapi.com/api/{options}?page={i}').json()['results']
         for i in resp:
             try:
                 if i['name'].lower().startswith(items.lower()):
@@ -34,12 +36,14 @@ def search():
         else:
             return render_template('index.html')
     elif options == "character":
-        resulte = requests.get(f'https://rickandmortyapi.com/api/{options}?page={random.randint(0, 34)}').json()['results']
+        resulte = requests.get(
+            f'https://rickandmortyapi.com/api/{options}?page={random.randint(0, 34)}').json()['results']
         return render_template('search.html', yoursearch=resulte, options=options)
     elif options == "episode":
         if not items:
             items = random.randint(1, 41)
-        resp = requests.get(f'https://rickandmortyapi.com/api/episode/{items}').json()
+        resp = requests.get(
+            f'https://rickandmortyapi.com/api/episode/{items}').json()
         if 'error' in resp:
             return render_template('index.html')
         episode = resp['episode']
@@ -47,12 +51,13 @@ def search():
         air_date = resp['air_date']
         resulte = []
         for person in resp['characters']:
-            # resulte = person
             resulte += [requests.get(person).json()]
         return render_template('search.html', yoursearch=resulte, name=name, air_date=air_date, options=options, items=items, episode=episode)
     name_id = request.args.get('pictursearch')
-    one = requests.get(f'https://rickandmortyapi.com/api/character/{name_id}').json()['characters']
+    one = requests.get(
+        f'https://rickandmortyapi.com/api/character/{name_id}').json()['characters']
     return render_template('search.html', name_id=one)
+
 
 @app.route('/about-us')
 def about_us():
