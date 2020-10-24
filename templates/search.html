@@ -31,7 +31,26 @@
     </div>
     {% endfor %}
 </div>
-{% endif %}
+{% elif options == 'episode' and items %}
+<h2>Episode name: {{name}}</h2>
+<h2>Air_date: {{air_date}}</h2>
+<h2>Episode: {{episode}}</h2>
+<h2>Characters</h2>
+<div class="grid-container">
+    {% for somechar in yoursearch %}
+    <div id=multi-character>
+        <p><img src="{{somechar['image']}}" alt="{{yoursearch['name']}}"></p>
+        <p>name: {{somechar['name']}}</p>
+        <p>status: {{somechar['status']}}</p>
+        <p>species: {{somechar['species']}}</p>
+        <p>type: {{somechar['type']}}</p>
+        <p>gender: {{somechar['gender']}}</p>
+        <p>origin: {{somechar['origin']['name']}}</p>
+        <p>location: {{somechar['location']['name']}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% elif name_id %}
 <div id=multi-character>
     <p><img src="{{name_id['image']}}" alt="{{name_id['name']}}"></p>
     <p>name: {{name_id['name']}}</p>
@@ -42,22 +61,9 @@
     <p>origin: {{name_id['origin']['name']}}</p>
     <p>location: {{name_id['location']['name']}}</p>
 </div>
-{% endblock %}
+{% endif %} {% endblock %}
 
 
-
-
-
-<!-- <div id=multi-character>
-    <p><img src="{{name_id['image']}}" alt="{{name_id['name']}}"></p>
-    <p>name: {{name_id['name']}}</p>
-    <p>status: {{name_id['status']}}</p>
-    <p>species: {{name_id['species']}}</p>
-    <p>type: {{name_id['type']}}</p>
-    <p>gender: {{name_id['gender']}}</p>
-    <p>origin: {{name_id['origin']['name']}}</p>
-    <p>location: {{name_id['location']['name']}}</p>
-</div> -->
 
 
 

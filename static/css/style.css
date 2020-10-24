@@ -1,3 +1,9 @@
+    @font-face {
+        font-family: "get_schwifty";
+        src: url('../fonts/get_schwifty.ttf');
+    }
+    
+    ;
     html {
         font-size: 10px
     }
@@ -7,9 +13,11 @@
     }
     
     h1 {
+        font-family: "get_schwifty";
+        color: #75D1AA;
         text-align: center;
-        font-size: 4rem;
-        padding-top: 250px;
+        font-size: 7rem;
+        padding-top: 100px;
     }
     
     p {
@@ -36,6 +44,7 @@
     }
     
     #navbar {
+        font-family: "get_schwifty";
         background-color: #AFA583;
     }
     
@@ -67,6 +76,8 @@
     /*-----------------------------------------*/
     
     h2 {
+        font-family: "get_schwifty";
+        color: #75D1AA;
         text-align: center;
         font-size: 4rem;
         margin: 10px;
