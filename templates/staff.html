@@ -1,1 +1,9 @@
-{% extends "base.html" %} {% block content %} {% endblock %}
+{% extends "base.html" %} {% block content %}
+<div class="info">
+    <img src="{{url_for('static', filename='images/nadav2.jpg')}}" alt="Avatar" />
+    <div class="container">
+        <p>Nadav Pesach</p>
+        <p>This ptoject on <a href="https://github.com/nadav-pesach/site-project">github</a>.</p>
+    </div>
+</div>
+{% endblock %}
