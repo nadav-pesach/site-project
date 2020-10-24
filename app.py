@@ -54,8 +54,7 @@ def search():
             resulte += [requests.get(person).json()]
         return render_template('search.html', yoursearch=resulte, name=name, air_date=air_date, options=options, items=items, episode=episode)
     name_id = request.args.get('pictursearch')
-    one = requests.get(
-        f'https://rickandmortyapi.com/api/character/{name_id}').json()['characters']
+    one = requests.get(f'https://rickandmortyapi.com/api/character/{name_id}').json()
     return render_template('search.html', name_id=one)
 
 
