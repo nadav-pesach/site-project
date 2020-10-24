@@ -112,6 +112,20 @@
         align-content: space-between;
         list-style: none;
     }
+    /* credit: yam mesicka */
+    
+    #photo-search[type="image"]:hover {
+        border-radius: 50%;
+        margin: 2em;
+        border: 1px solid #ccc;
+        box-shadow: 2px 3px 2px #eee;
+    }
+    
+    form {
+        display: flex;
+        justify-items: center;
+    }
+    /* credit: yam mesicka */
     
     .info {
         text-align: center;
