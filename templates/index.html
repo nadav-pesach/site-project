@@ -13,4 +13,20 @@
         <button id="search-button" type="submit">Search</button>
     </form>
 </div>
+<div>
+
+    <ul class="flex-form">
+        {% for somechar in yoursearch %}
+        <li>
+            <form id="run-search-by-pic" action="/search" method="GET">
+                <label for="somechar['name']" class="hidden">search</label>
+                <input type="hidden" name="pictursearch" value="{{somechar['id']}}">
+                <input id="photo-search" type="image" src="{{somechar['image']}}" alt="submit">
+            </form>
+        </li>{% endfor %}
+    </ul>
+
+</div>
 {% endblock %}
+
+<!-- <button id="photo-search" type="submit" name="{{somechar['name']}}"><img src="{{somechar['image']}}"></button><img src="{{somechar['image']}}"> -->

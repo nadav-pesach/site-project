@@ -95,4 +95,8 @@
         grid-template-columns: auto auto auto;
     }
     
-    #multi-character {}
+    .flex-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }

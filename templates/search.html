@@ -1,13 +1,19 @@
-{% extends "base.html" %} {% block content %} {% if options == 'character' and items %}
-<div id=character>
-    <p><img src="{{yoursearch['image']}}" alt="{{yoursearch['name']}}"></p>
-    <p>name: {{yoursearch['name']}}</p>
-    <p>status: {{yoursearch['status']}}</p>
-    <p>species: {{yoursearch['species']}}</p>
-    <p>type: {{yoursearch['type']}}</p>
-    <p>gender: {{yoursearch['gender']}}</p>
-    <p>origin: {{yoursearch['origin']['name']}}</p>
-    <p>location: {{yoursearch['location']['name']}}</p>
+{% extends "base.html" %} {% block content %} {% if yoursearch is string %}
+<P>{{yoursearch}}</P>
+{% elif options == 'character' and items %}
+<div class="grid-container">
+    {% for somechar in yoursearch %}
+    <div id=multi-character>
+        <p><img src="{{somechar['image']}}" alt="{{yoursearch['name']}}"></p>
+        <p>name: {{somechar['name']}}</p>
+        <p>status: {{somechar['status']}}</p>
+        <p>species: {{somechar['species']}}</p>
+        <p>type: {{somechar['type']}}</p>
+        <p>gender: {{somechar['gender']}}</p>
+        <p>origin: {{somechar['origin']['name']}}</p>
+        <p>location: {{somechar['location']['name']}}</p>
+    </div>
+    {% endfor %}
 </div>
 {% elif options == 'character' %}
 <h2>Random 20~ characters</h2>
@@ -25,13 +31,33 @@
     </div>
     {% endfor %}
 </div>
-{% endif %} {% endblock %}
+{% endif %}
+<div id=multi-character>
+    <p><img src="{{name_id['image']}}" alt="{{name_id['name']}}"></p>
+    <p>name: {{name_id['name']}}</p>
+    <p>status: {{name_id['status']}}</p>
+    <p>species: {{name_id['species']}}</p>
+    <p>type: {{name_id['type']}}</p>
+    <p>gender: {{name_id['gender']}}</p>
+    <p>origin: {{name_id['origin']['name']}}</p>
+    <p>location: {{name_id['location']['name']}}</p>
+</div>
+{% endblock %}
 
 
 
 
 
-
+<!-- <div id=multi-character>
+    <p><img src="{{name_id['image']}}" alt="{{name_id['name']}}"></p>
+    <p>name: {{name_id['name']}}</p>
+    <p>status: {{name_id['status']}}</p>
+    <p>species: {{name_id['species']}}</p>
+    <p>type: {{name_id['type']}}</p>
+    <p>gender: {{name_id['gender']}}</p>
+    <p>origin: {{name_id['origin']['name']}}</p>
+    <p>location: {{name_id['location']['name']}}</p>
+</div> -->
 
 
 
