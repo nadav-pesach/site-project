@@ -1,6 +1,7 @@
-import requests
-from flask import Flask, redirect, render_template, request, url_for
 import random
+
+import requests
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
@@ -74,4 +75,4 @@ def stuff():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(threaded=True, port=5000)
