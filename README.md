@@ -8,8 +8,9 @@
 # search  guide:
  In search bar - you can choose
    1. Character name
-   2. If no name given you will get 20 random characters
-   2. Episode number
+   2. If no name given you will get a few random characters
+   3. Episode number
+   4. If no number given you will get a random episode
  
  Photos on the main page are clickable
  
