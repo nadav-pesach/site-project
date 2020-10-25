@@ -3,7 +3,7 @@
  
  allow you to search info about Rick and Morty characters
  
-# --------------------------------------------------------------------------
+# -----------------------------------------------------------------
 
 # search  guide:
  In search bar - you can choose
@@ -13,7 +13,7 @@
  
  Photos on the main page are clickable
  
- # --------------------------------------------------------------------------
+ # -----------------------------------------------------------------
 
  Rick and Morty is created by Justin Roiland and Dan Harmon for Adult Swim.
 
